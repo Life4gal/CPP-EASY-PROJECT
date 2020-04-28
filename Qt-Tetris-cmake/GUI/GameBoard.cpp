@@ -4,7 +4,7 @@ using namespace GUI;
 
 GameBoard::GameBoard(QWidget *parent, int _width, int _height)
             : QWidget(parent),
-            mainLayout(new QVBoxLayout()),      //主布局
+            mainLayout(new QVBoxLayout(this)),      //主布局
             boardLayout(nullptr),               //边界布局，在重设游戏时进行排布
             game(new cGame(_width, _height)),
             width(_width), height(_height),
@@ -16,6 +16,7 @@ GameBoard::GameBoard(QWidget *parent, int _width, int _height)
 
     //窗口大小
     resize(400, 600);
+    move(1000, 200);
 
     setLayout(mainLayout);
 

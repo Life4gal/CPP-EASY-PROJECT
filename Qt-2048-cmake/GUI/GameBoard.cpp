@@ -4,7 +4,7 @@ using namespace GUI;
 
 GameBoard::GameBoard(QWidget *parent, int dimension)
             : QWidget(parent),
-                mainLayout(new QVBoxLayout()),  //主布局
+                mainLayout(new QVBoxLayout(this)),  //主布局
                 boardLayout(nullptr),       //边界布局，在重设游戏时进行排布
                 game(new Core::Game(dimension)),    //默认是4阶面板
                 score(new QLabel(QString("SCORE: %1").arg(game->getScore())))   //分数标签

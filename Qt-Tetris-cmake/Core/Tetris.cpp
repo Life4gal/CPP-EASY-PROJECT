@@ -90,8 +90,6 @@ void Tetris::moveHorizontally(const int step) noexcept
     }
 }
 
-#include <iostream>
-
 void Tetris::rotate(
         const int min_row, const int max_row,
         const int min_col, const int max_col) noexcept
@@ -114,13 +112,6 @@ void Tetris::rotate(
         auto [curr_min_row, curr_max_row] = row_pair;
         auto [curr_min_col, curr_max_col] = col_pair;
 
-        std::cout << "before" << std::endl;
-        for(Tile* tile : position)
-        {
-            auto [x, y] = *tile;
-            std::cout << x << "*" << y << std::endl;
-        }
-
         //越界检查
         if(int step = curr_min_row - min_row; step < 0)
         {
@@ -137,13 +128,6 @@ void Tetris::rotate(
         if(int step = curr_max_col - max_col; step > 0)
         {
             moveHorizontally(-step);
-        }
-
-        std::cout << "after" << std::endl;
-        for(Tile* tile : position)
-        {
-            auto [x, y] = *tile;
-            std::cout << x << "*" << y << std::endl;
         }
     }
 }

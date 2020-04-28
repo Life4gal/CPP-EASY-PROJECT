@@ -52,7 +52,7 @@ void LabelTile::draw()
             }
             case 256:
             {
-                auto* dse = new QGraphicsDropShadowEffect();
+                auto* dse = new QGraphicsDropShadowEffect(this);
                 dse->setColor(Qt::yellow);
                 dse->setBlurRadius(20);
                 dse->setOffset(-1);
@@ -62,7 +62,7 @@ void LabelTile::draw()
             }
             case 512:
             {
-                auto* dse = new QGraphicsDropShadowEffect();
+                auto* dse = new QGraphicsDropShadowEffect(this);
                 dse->setColor(Qt::yellow);
                 dse->setBlurRadius(30);
                 dse->setOffset(-1);
@@ -72,7 +72,7 @@ void LabelTile::draw()
             }
             case 1024:
             {
-                auto* dse = new QGraphicsDropShadowEffect();
+                auto* dse = new QGraphicsDropShadowEffect(this);
                 dse->setColor(Qt::yellow);
                 dse->setBlurRadius(40);
                 dse->setOffset(-1);
@@ -82,7 +82,7 @@ void LabelTile::draw()
             }
             case 2048:
             {
-                auto* dse = new QGraphicsDropShadowEffect();
+                auto* dse = new QGraphicsDropShadowEffect(this);
                 dse->setColor(Qt::yellow);
                 dse->setBlurRadius(50);
                 dse->setOffset(-1);
